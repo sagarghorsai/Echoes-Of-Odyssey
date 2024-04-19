@@ -1,0 +1,50 @@
+//Asset Store
+
+All rights not expressly granted are reserved by Licensor. For greater certainty and without limitation of the foregoing, 
+use of Assets, whether modified as permitted hereunder or unmodified, is limited to use as expressly provided in this EULA.
+https://unity.com/legal/as-terms
+
+Asset: Pirate Coin
+Asset Link:https://stmoproductions.wixsite.com/davepixel
+Author: DavePixel
+Date: March 21, 2024
+Time: 6:10 PM
+
+Asset: Low Poly Skeleton
+Asset Link:https://www.artstation.com/comeback
+Author: Comeback
+Date: March 21, 2024
+Time: 6:10 PM
+
+Asset: FREE Low Poly Human - RPG Character
+Asset Link: blinkstudios.dev/
+Author: Blink
+Date: March 21, 2024
+Time: 6:10 PM
+
+Asset: Lowpoly Environment - Nature Free - MEDIEVAL FANTASY SERIES
+Asset Link: www.artstation.com/polytope
+Author: Polytope Studio
+Date: March 21, 2024
+Time: 6:10 PM
+
+
+Asset: Undead Skeleton Enemies
+Asset Link: sketchfab.com/DantesAnvil
+Author: Dante's anvil
+Date: March 21, 2024
+Time: 6:10 PM
+
+Asset: SteampunkUI
+Asset Link: www.gentleland.net
+Author: Gentleland
+Date: March 21, 2024
+Time: 6:10 PM
+
+
+//Video
+
+Title: How to make a Minimap in Unity
+URL: https://www.youtube.com/watch?v=28JTTXqMvOU&ab_channel=Brackeys
+Author:Brackeys
+
