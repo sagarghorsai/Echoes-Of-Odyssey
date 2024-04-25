@@ -6,7 +6,6 @@ public class PickupItem : MonoBehaviour
     private Interactor interactor;
     private bool inRange = false;
 
-    // Adjust this value to increase the interaction range
     public float interactionRange = 3f;
 
     private void Start()

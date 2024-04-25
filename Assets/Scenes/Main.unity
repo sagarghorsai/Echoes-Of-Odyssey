@@ -905,6 +905,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530859811}
   m_CullTransparentMesh: 1
+--- !u!1001 &576229024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2098568475298320576, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.412352
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8018434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435280886774110480, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01528ba098ab9b04eb46ab5155544113, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,6 +2189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 6980792014426171106, guid: 632f8c80e69a46648860450ca0860f68, type: 3}
+      propertyPath: m_text
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2372,7 +2433,7 @@ MonoBehaviour:
   - {fileID: 1927086119}
   shopItems:
   - itemName: Axe
-    price: 10
+    price: 50
     item:
       name: Axe
       count: 1
@@ -2381,7 +2442,7 @@ MonoBehaviour:
     priceText: {fileID: 1377282732}
     titleText: {fileID: 774780977}
   - itemName: Sword
-    price: 5
+    price: 20
     item:
       name: Sword
       count: 1
@@ -2517,73 +2578,73 @@ MonoBehaviour:
   sounds:
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 7680d2f754f60e041b041a84abe4f5cf, type: 3}
-    volume: 1
+    volume: 0.51
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: HitSound
     clip: {fileID: 8300000, guid: e617b66747e76aa4db2d8b74339d7ab9, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 33d6584aefd185f439f84537fb1d2feb, type: 3}
-    volume: 1
+    volume: 0.515
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BackGround
     clip: {fileID: 8300000, guid: 72f622b3a09ab4744b628780e85b55b9, type: 3}
-    volume: 1
+    volume: 0.475
     pitch: 0.2
     loop: 1
     source: {fileID: 0}
   - name: Footstep
     clip: {fileID: 8300000, guid: be7c639154bde6b43a25e481e78c44aa, type: 3}
-    volume: 1
+    volume: 0.598
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: HitWithSword
     clip: {fileID: 8300000, guid: e617b66747e76aa4db2d8b74339d7ab9, type: 3}
-    volume: 1
+    volume: 0.52
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: HitWithAxe
     clip: {fileID: 8300000, guid: 41646813344b5ba4ba79dcd144c98625, type: 3}
-    volume: 1
+    volume: 0.48
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: HitWithFist
     clip: {fileID: 8300000, guid: 877978a59642e4145beedfa1658c5e62, type: 3}
-    volume: 1
+    volume: 0.647
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Equip
     clip: {fileID: 8300000, guid: 6ceb398715cbd9449addb68e1802a1ab, type: 3}
-    volume: 1
+    volume: 0.598
     pitch: 2
     loop: 0
     source: {fileID: 0}
   - name: Damage
     clip: {fileID: 8300000, guid: a1c7c35196d23c9469b19189d33260da, type: 3}
-    volume: 1
+    volume: 0.647
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Unequip
     clip: {fileID: 8300000, guid: 55f0945782d444f4b85a06b4159ae18f, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SkeletonDeath
     clip: {fileID: 8300000, guid: 7879d5a0b0dfcd745b7a60f8cd56a768, type: 3}
-    volume: 1
+    volume: 0.461
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2712,7 +2773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6980792014426171106, guid: 632f8c80e69a46648860450ca0860f68, type: 3}
       propertyPath: m_text
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7669739456604695144, guid: 632f8c80e69a46648860450ca0860f68, type: 3}
       propertyPath: m_text
@@ -2967,7 +3028,7 @@ PrefabInstance:
       objectReference: {fileID: 2045627058}
     - target: {fileID: 8374488417051056017, guid: 6bf042815e7204e4f9d8386c8e24ce16, type: 3}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8374488417051056017, guid: 6bf042815e7204e4f9d8386c8e24ce16, type: 3}
       propertyPath: inventory
@@ -2975,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 9113186261187224120}
     - target: {fileID: 8374488417051056017, guid: 6bf042815e7204e4f9d8386c8e24ce16, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8374488417051056017, guid: 6bf042815e7204e4f9d8386c8e24ce16, type: 3}
       propertyPath: shopCanvas
@@ -3116,3 +3177,4 @@ SceneRoots:
   - {fileID: 1331700522}
   - {fileID: 17871369}
   - {fileID: 1921237188}
+  - {fileID: 576229024}

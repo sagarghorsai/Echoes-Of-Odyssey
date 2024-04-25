@@ -1893,7 +1893,6 @@ MonoBehaviour:
   defaultDamageAmount: 1
   swordDamageAmount: 3
   axeDamageAmount: 5
-  bowDamageAmount: 2
 --- !u!1 &8569649574974592577
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject optionsPanel;
+    public GameObject controlPanel;
+
     public AudioMixer audioMixer;
     public void StartGame()
     {
@@ -29,6 +31,23 @@ public class MainMenu : MonoBehaviour
 
         // Disable the options panel
         optionsPanel.SetActive(false);
+    }
+
+    public void OpenControls()
+    {
+        // Enable the main menu panel
+        optionsPanel.SetActive(false);
+
+        // Disable the options panel
+        controlPanel.SetActive(true);
+    }
+    public void CloseControls()
+    {
+        // Enable the main menu panel
+        optionsPanel.SetActive(true);
+
+        // Disable the options panel
+        controlPanel.SetActive(false);
     }
 
     public void QuitGame()

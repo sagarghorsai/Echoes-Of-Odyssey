@@ -16,10 +16,8 @@ public class WinChecker : MonoBehaviour
             return;
         }
 
-        // Check if the parentObject has any child objects
         if (parentObject.transform.childCount == 0)
         {
-            // If there are no child objects, load the main menu scene
             SceneManager.LoadScene("Win");
         }
     }

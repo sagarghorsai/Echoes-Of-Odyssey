@@ -7,34 +7,33 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public int maxHealth = 10;
-    public int currentHealth;
-
     public float jumpForce = 10f;
     public float groundCheckDistance = 0.1f;
     public float rotationSpeed = 5f;
     public Transform cameraTransform;
-
+    public GameObject[] weapons;
+    public float cooldownTime = 1.0f;
+    // Private variables
+    private int currentHealth;
     private Animator animator;
     private Rigidbody rb;
     private bool isGrounded;
     private bool isRotating;
     private Interactor interactor;
-    public Inventory inventory;
+    private Inventory inventory;
     private bool isWalking = false;
-    public bool isDead = false;
+    private bool isDead = false;
     private AudioManager audioManager;
-
-
+    bool canHit = true;
+    // Serialized fields
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private WeaponType currentWeapon = WeaponType.None; // Default weapon type is None
-    public GameObject[] weapons;
     // Enum to represent weapon types
     public enum WeaponType
     {
         None,
         Sword,
         Axe,
-        Bow
     }
 
     void Start()
@@ -87,16 +86,15 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             animator.SetTrigger("Jump");
             audioManager.Play("Jump");
-
+            audioManager.Stop("Footstep");
         }
 
         animator.SetFloat("X", horizontal);
         animator.SetFloat("Y", vertical);
 
 
-        if (Input.GetMouseButtonDown(0) && !isDead) // Left mouse button for hit
+        if (Input.GetMouseButtonDown(0) && !isDead && canHit) // Check if the player can hit
         {
-
             if (inventory.HasWeapon(currentWeapon))
             {
                 switch (currentWeapon)
@@ -104,15 +102,10 @@ public class PlayerController : MonoBehaviour
                     case WeaponType.Sword:
                         animator.SetTrigger("HitWithSword");
                         audioManager.Play("HitWithSword");
-
-
                         break;
                     case WeaponType.Axe:
                         animator.SetTrigger("HitWithAxe");
                         audioManager.Play("HitWithAxe");
-                        break;
-                    case WeaponType.Bow:
-                        // Implement bow shot animation
                         break;
                 }
             }
@@ -120,12 +113,16 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("HitWithFist");
                 audioManager.Play("HitWithFist");
-
             }
+
             Hit();
+            canHit = false; // Disable hitting temporarily
+            StartCoroutine(EnableHitAfterCooldown(cooldownTime)); // Start cooldown timer
         }
 
-        // Camera rotation with mouse movement
+   
+
+
         if (Input.GetMouseButtonDown(1)) // Right mouse button for camera rotation
         {
             isRotating = true;
@@ -157,10 +154,6 @@ public class PlayerController : MonoBehaviour
                     EquipWeapon(WeaponType.Axe); // Equip axe
                     break;
                 case WeaponType.Axe:
-                    audioManager.Play("Equip");
-                    EquipWeapon(WeaponType.Bow); // Equip bow
-                    break;
-                case WeaponType.Bow:
                     audioManager.Play("Unequip");
 
                     UnequipWeapon(); // Unequip weapon
@@ -175,7 +168,11 @@ public class PlayerController : MonoBehaviour
             Interact();
         }
     }
-
+    IEnumerator EnableHitAfterCooldown(float cooldown)
+    {
+        yield return new WaitForSeconds(cooldown);
+        canHit = true; // Re-enable hitting after cooldown
+    }
     void FixedUpdate()
     {
         // Check if the player is grounded
